@@ -268,7 +268,7 @@ public class TetrisFrame extends JFrame implements KeyListener, ActionListener{
 		if (e.getKeyCode() == KeyEvent.VK_Z) {
 			currentTetramino.rotateLeft(this);
 		}
-		if (e.getKeyCode() == KeyEvent.VK_X) {
+		if (e.getKeyCode() == KeyEvent.VK_X || e.getKeyCode() == KeyEvent.VK_UP) {
 			currentTetramino.RotateRight(this);
 		}
 		if (e.getKeyCode() == KeyEvent.VK_C || e.getKeyCode() == KeyEvent.VK_SPACE) {
@@ -300,7 +300,7 @@ public class TetrisFrame extends JFrame implements KeyListener, ActionListener{
 		else if (e.getSource() == controls) {
 			JOptionPane.showMessageDialog(this,"Arrows Keys: Move\n"+
 											   "Z: Rotate Left\n"+
-											   "X: Rotate Right\n"+
+											   "X or Up Arrow: Rotate Right\n"+
 											   "C or Space: Drop\n"+
 											   "R: Restart Game");
 		}
