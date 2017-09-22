@@ -3,6 +3,7 @@ import java.awt.Point;
 import java.util.Random;
 
 public class Tetramino{
+	private int 	id;
 	private int		size;
 	private int		bottom;
 	private int 	left;
@@ -23,7 +24,10 @@ public class Tetramino{
 		
 		color = new Color(colorNumber,colorNumber,colorNumber);
 		
-		switch(random.nextInt(7)) {
+		id = random.nextInt(7);
+		
+		switch(id) {
+
 		case 0:
 			size = 4;
 			position = new Point(3,0);
@@ -302,6 +306,10 @@ public class Tetramino{
 	
 	public Color getColor() {
 		return color;
+	}
+	
+	public int getId() {
+		return id;
 	}
 	
 	public void setMoved(boolean b) {

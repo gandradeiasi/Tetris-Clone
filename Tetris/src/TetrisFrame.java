@@ -33,6 +33,7 @@ public class TetrisFrame extends JFrame implements KeyListener, ActionListener{
 	private TetrisFrame instance;
 	private JPanel[][] squares;
 	private Tetramino currentTetramino;
+	private Tetramino nextTetramino;
 	private Color[][] colorMatrix;
 	public void startGame() {
 		GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
@@ -55,6 +56,7 @@ public class TetrisFrame extends JFrame implements KeyListener, ActionListener{
 		width				= columns * squareSize;
 		matrix 				= new int[rows][columns];
 		squares 			= new JPanel[rows][columns];
+		nextTetramino		= new Tetramino();
 		currentTetramino 	= new Tetramino();
 		icon 				= new ImageIcon("src\\t.png");
 		colorMatrix			= new Color[rows][columns];
@@ -214,8 +216,18 @@ public class TetrisFrame extends JFrame implements KeyListener, ActionListener{
 				}
 			}
 		}
-		currentTetramino = new Tetramino();
+		currentTetramino = nextTetramino;
+		nextTetramino();
 	}
+	
+	public void nextTetramino() {
+		Tetramino localTetramino;
+		while (true) {
+			localTetramino = new Tetramino();
+			if (currentTetramino.getId() != localTetramino.getId()) break;
+		}
+		nextTetramino = localTetramino;
+	}	
 	
 	public void increaseSpeed() {
 		speed = (int) (speed * 0.95);
