@@ -1,7 +1,9 @@
 # Tetris-Clone
 Tetris clone made in Java with Eclipse
 
+
 Download Tetris.jar file and run it to play
+
 
 Left, Right and Down Arrows - Move Tetramino
 
@@ -12,4 +14,9 @@ X or Up Arrow - Rotate Right
 C or Space - Drop Tetramino
 
 R - Restart Game
+
+
+Updates
+
+1.0 - Initial game version.
 
