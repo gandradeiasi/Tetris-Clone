@@ -3,11 +3,11 @@ Tetris clone made in Java with Eclipse
 
 Download Tetris.jar file and run it to play
 
-Arrow Keys - Move Tetramino
+Left, Right and Down Arrows - Move Tetramino
 
 Z - Rotate Left
 
-X - Rotate Right
+X or Up Arrow - Rotate Right
 
 C or Space - Drop Tetramino
 
