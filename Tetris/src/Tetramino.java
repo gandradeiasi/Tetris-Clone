@@ -18,9 +18,10 @@ public class Tetramino{
 		Random random = new Random();
 		
 		int minimumColor = 0;
-		int maximumColor = 200;
+		int maximumColor = 150;
+		int colorNumber  = random.nextInt(maximumColor-minimumColor)+minimumColor;
 		
-		color = new Color(random.nextInt(maximumColor-minimumColor)+minimumColor,random.nextInt(maximumColor-minimumColor)+minimumColor,random.nextInt(maximumColor-minimumColor)+minimumColor);
+		color = new Color(colorNumber,colorNumber,colorNumber);
 		
 		switch(random.nextInt(7)) {
 		case 0:
