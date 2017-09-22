@@ -1,2 +1,2 @@
 # Tetris-Clone
-Tetris clone made in Java
+Tetris clone made in Java with Eclipse
