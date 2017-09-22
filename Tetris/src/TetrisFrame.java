@@ -116,6 +116,7 @@ public class TetrisFrame extends JFrame implements KeyListener, ActionListener{
 								for (int i2 = i; i2 >= 1; i2--) {
 									for (int j2 = 0; j2 < columns; j2++) {
 										matrix[i2][j2] = matrix[i2-1][j2];
+										colorMatrix[i2][j2] = colorMatrix[i2-1][j2];
 									}
 								}
 								rowsCleared++;
