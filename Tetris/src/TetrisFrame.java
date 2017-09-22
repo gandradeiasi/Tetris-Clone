@@ -96,6 +96,8 @@ public class TetrisFrame extends JFrame implements KeyListener, ActionListener{
 		//Set Visibility
 		this.setVisible(true);
 		
+		showControls();
+		
 		//Loop
 		Thread loop = new Thread() {
 			@Override
@@ -258,6 +260,14 @@ public class TetrisFrame extends JFrame implements KeyListener, ActionListener{
 			}
 		}
 	}
+	
+	public void showControls() {
+		JOptionPane.showMessageDialog(this,"Arrows Keys: Move\n"+
+				   "Z: Rotate Left\n"+
+				   "X or Up Arrow: Rotate Right\n"+
+				   "C or Space: Drop\n"+
+				   "R: Restart Game");
+	}
 
 	@Override
 	public void keyPressed(KeyEvent e) {
@@ -311,11 +321,7 @@ public class TetrisFrame extends JFrame implements KeyListener, ActionListener{
 			restartGame();
 		}
 		else if (e.getSource() == controls) {
-			JOptionPane.showMessageDialog(this,"Arrows Keys: Move\n"+
-											   "Z: Rotate Left\n"+
-											   "X or Up Arrow: Rotate Right\n"+
-											   "C or Space: Drop\n"+
-											   "R: Restart Game");
+			showControls();
 		}
 	}
 	
