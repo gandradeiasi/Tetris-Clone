@@ -118,10 +118,11 @@ public class TetrisFrame extends JFrame implements KeyListener, ActionListener{
 								}
 								rowsCleared++;
 								pointsEarned += 100;
-								increaseSpeed();
 							}
 						}
 					}
+					
+					if (rowsCleared > 0) increaseSpeed();
 					
 					points += pointsEarned * rowsCleared; 
 					
@@ -217,7 +218,7 @@ public class TetrisFrame extends JFrame implements KeyListener, ActionListener{
 	}
 	
 	public void increaseSpeed() {
-		if (speed - 30 > 0) speed -= 30;
+		speed = (int) (speed * 0.95);
 	}
 	
 	public void restartGame() {
