@@ -2,9 +2,6 @@
 Tetris clone made in Java with Eclipse
 
 
-Download Tetris.jar file and run it to play
-
-
 Left, Right and Down Arrows - Move Tetramino
 
 Z - Rotate Left
